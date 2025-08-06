@@ -24,9 +24,11 @@ body {
 header {
   text-align: center;
   padding: 4rem 1rem 2rem;
-  background: #fff;
+  background: var(--bg);
+  color: var(--text);
   box-shadow: var(--shadow);
 }
+
 
 header h1 {
   font-size: 3rem;
@@ -45,9 +47,10 @@ nav {
   flex-wrap: wrap;
   gap: 1.5rem;
   padding: 1rem;
-  background: #fafafa;
-  border-bottom: 1px solid #ddd;
+  background: var(--card-bg);
+  border-bottom: 1px solid #333;
 }
+
 
 nav a {
   text-decoration: none;
@@ -58,6 +61,25 @@ nav a {
 
 nav a:hover {
   color: var(--accent);
+}
+
+nav a {
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
 }
 
 .hero {
@@ -135,11 +157,11 @@ section h2 {
 }
 
 footer {
-  background: #eee;
+  background: var(--bg);
+  color: var(--gray);
   text-align: center;
   padding: 2rem 1rem;
   font-size: 0.9rem;
-  color: #333;
 }
 
 a {

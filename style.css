@@ -1,10 +1,10 @@
 :root {
-  --bg: #f9f8f5;
-  --text: #222;
-  --accent: #e74c3c;
-  --gray: #777;
-  --card-bg: #fff;
-  --shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  --bg: #1c1c1e;       /* dark grey background */
+  --text: #f4f4f4;      /* light text */
+  --accent: #ff3333;    /* red accent */
+  --gray: #888888;      /* softer gray */
+  --card-bg: #2a2a2c;   /* dark card background */
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 * {

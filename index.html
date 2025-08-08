@@ -2,114 +2,171 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ian's Creative Platform</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Studio</title>
+
+  <!-- FONT: temporary stand-in. Swap once we confirm Karl’s exact webfont. -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <header>
-    <h1>BY CREATIVES FOR CREATIVES</h1>
-    <p>Digital Kits. Workflows. Creative Empowerment.</p>
+  <header class="site-head">
+    <div class="brand">
+      <span class="dot"></span>
+      <a href="#top" class="logo">STUDIO</a>
+    </div>
+    <nav class="nav">
+      <a href="#kits">Kits</a>
+      <a href="#tutorials">Tutorials</a>
+      <a href="#features">Features</a>
+      <a href="#tiers" class="cta">Join</a>
+    </nav>
   </header>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#kits">Asset Kits</a>
-    <a href="#tutorials">Tutorials</a>
-    <a href="#tiers">Membership</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <section class="hero">
-    <h2>Create Better. Create Faster.</h2>
-  </section>
-  <section id="kits">
-    <h2>Monthly Digital Kits</h2>
-    <div class="cards">
-      <div class="card reveal">
-        <img src="https://images.unsplash.com/photo-1549921296-3f0b689b6785" alt="Templates" />
-        <h3>Templates & Swipe Files</h3>
-        <p>Notion layouts, project planners, and content idea boards that get you going fast.</p>
-      </div>
-      <div class="card reveal">
-        <img src="https://images.unsplash.com/photo-1542744173-05336fcc7ad4" alt="Presets" />
-        <h3>Presets & LUTs</h3>
-        <p>Instantly enhance your visuals across photo, video, and car shots.</p>
-      </div>
-      <div class="card reveal">
-        <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f" alt="BTS" />
-        <h3>Behind-the-Scenes Toolkits</h3>
-        <p>Pro workflows and production setups that help you replicate top-tier output.</p>
-      </div>
-    </div>
-  </section>
- <section id="tutorials" class="reveal">
-    <h2>Tutorials & Creator Insights</h2>
-    <div class="cards">
-      <div class="card reveal">
-        <img src="https://images.unsplash.com/photo-1611262588024-1e7fa3dfbf54" alt="Tutorial" />
-        <h3>How to Use Your Assets</h3>
-        <p>Short, practical walkthroughs to help you apply kits to real projects with ease.</p>
-      </div>
-      <div class="card reveal">
-        <img src="https://images.unsplash.com/photo-1590080876274-c9c1b11b970d" alt="Workflow" />
-        <h3>Creator Workflow Breakdowns</h3>
-        <p>Learn the thinking behind efficient content systems.</p>
-      </div>
-    </div>
-  </section>
-  <!-- 🔥 Scroll-Reveal Image Stack -->
-<section class="scroll-stack">
-  <div class="image-layer" style="background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413')">
-    <div class="overlay-text">
-      <h2>This is the first reveal</h2>
-    </div>
-  </div>
-</section>
 
-<section class="scroll-stack">
-  <div class="image-layer" style="background-image: url('https://images.unsplash.com/photo-1518779578993-ec3579fee39f')">
-    <div class="overlay-text">
-      <h2>Here comes the next</h2>
+  <!-- HERO: full-bleed image + grain + subtle parallax -->
+  <section id="top" class="hero reveal">
+    <div class="hero-media"
+         style="--hero:url('assets/hero.jpg')">
+      <h1 class="hero-title">
+        Build. Grade. Ship.
+      </h1>
+      <p class="hero-sub">Digital kits for creators across travel, food, cars.</p>
     </div>
-  </div>
-</section>
-
-<section class="scroll-stack">
-  <div class="image-layer" style="background-image: url('https://images.unsplash.com/photo-1590080876274-c9c1b11b970d')">
-    <div class="overlay-text">
-      <h2>And another</h2>
-    </div>
-  </div>
-</section>
-
-  <section id="tiers">
-    <h2>Membership Tiers</h2>
-    <div class="cards">
-      <div class="card reveal">
-        <h3>Starter Assets – $5/mo</h3>
-        <p>Monthly download of templates, presets, and swipe files.</p>
-      </div>
-      <div class="card reveal">
-        <h3>Deep Dive Access – $9/mo</h3>
-        <p>Starter pack + how-to-use videos and example use cases.</p>
-      </div>
-      <div class="card reveal">
-        <h3>Creator Toolkit – $15/mo</h3>
-        <p>Full access + archive, bundles, and high-res deliverables.</p>
-      </div>
-      <div class="card reveal">
-        <h3>BTS + Mentorship – $30/mo</h3>
-        <p>All above + BTS docs, monthly AMA, workflow breakdowns.</p>
-      </div>
-    </div>
-    <p style="text-align:center; margin-top:2rem;">
-      <a href="https://www.patreon.com/yourname" target="_blank">Join on Patreon →</a>
-    </p>
   </section>
-  <footer id="contact">
-    <p>© 2025 Ian Munga | Built for creators, by a creator.</p>
-    <p>Contact: <a href="mailto:ian@yourdomain.com">ian@yourdomain.com</a></p>
+
+  <!-- MAGAZINE BLOCK: collage grid -->
+  <section id="features" class="mag reveal">
+    <div class="mag-head">
+      <h2>Latest drops</h2>
+      <p class="eyebrow">What | Where | When</p>
+    </div>
+
+    <div class="grid">
+      <article class="card reveal">
+        <div class="card-img" style="--img:url('assets/feat1.jpg')"></div>
+        <div class="card-body">
+          <h3>72 Hours in the High Country</h3>
+          <p>Workflow presets + location notes.</p>
+        </div>
+      </article>
+
+      <article class="card reveal">
+        <div class="card-img" style="--img:url('assets/feat2.jpg')"></div>
+        <div class="card-body">
+          <h3>Harissa Heat</h3>
+          <p>Food styling LUTs + tabletop rig diagram.</p>
+        </div>
+      </article>
+
+      <article class="card reveal">
+        <div class="card-img" style="--img:url('assets/feat3.jpg')"></div>
+        <div class="card-body">
+          <h3>Night Run</h3>
+          <p>Automotive neon pack + audio bed.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- STICKY REVEAL STACK -->
+  <section class="stack">
+    <div class="panel" style="--bg:url('assets/stack1.jpg')">
+      <div class="panel-text">
+        <h2>Texture > polish</h2>
+        <p>Shoot fast. Grade consistently. Publish on schedule.</p>
+      </div>
+    </div>
+    <div class="panel" style="--bg:url('assets/stack2.jpg')">
+      <div class="panel-text">
+        <h2>Systems > willpower</h2>
+        <p>Templates and swipe files reduce time-to-post.</p>
+      </div>
+    </div>
+    <div class="panel" style="--bg:url('assets/stack3.jpg')">
+      <div class="panel-text">
+        <h2>Tools > talk</h2>
+        <p>Kits, rigs, and repeatable setups.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- KITS -->
+  <section id="kits" class="kits reveal">
+    <h2>Monthly Kits</h2>
+    <div class="grid">
+      <article class="card reveal">
+        <div class="card-img" style="--img:url('assets/kit1.jpg')"></div>
+        <div class="card-body">
+          <h3>Notion Ops</h3>
+          <p>Calendar, briefs, deliverables, swipe.</p>
+        </div>
+      </article>
+
+      <article class="card reveal">
+        <div class="card-img" style="--img:url('assets/kit2.jpg')"></div>
+        <div class="card-body">
+          <h3>LR Presets + LUTs</h3>
+          <p>Muted highlights, warm shadows, clean mids.</p>
+        </div>
+      </article>
+
+      <article class="card reveal">
+        <div class="card-img" style="--img:url('assets/kit3.jpg')"></div>
+        <div class="card-body">
+          <h3>BTS Toolkit</h3>
+          <p>Lighting diagrams, gear lists, CSV budgets.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- TUTORIALS CAROUSEL -->
+  <section id="tutorials" class="inspo reveal">
+    <h2>How it’s used</h2>
+    <div class="row">
+      <div class="chip"><img src="assets/tut1.jpg" alt=""/><span>Grade pass</span></div>
+      <div class="chip"><img src="assets/tut2.jpg" alt=""/><span>Rig setup</span></div>
+      <div class="chip"><img src="assets/tut3.jpg" alt=""/><span>Automotive night</span></div>
+      <div class="chip"><img src="assets/tut4.jpg" alt=""/><span>Food top‑down</span></div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="tiers" class="tiers reveal">
+    <h2>Membership</h2>
+    <div class="grid tiers-grid">
+      <div class="tier">
+        <h3>Starter</h3>
+        <p class="price">$5</p>
+        <ul>
+          <li>Monthly download</li><li>Templates + presets</li>
+        </ul>
+        <a class="btn" href="#" target="_blank">Join</a>
+      </div>
+      <div class="tier hot">
+        <h3>Toolkit</h3>
+        <p class="price">$15</p>
+        <ul>
+          <li>All kits + archive</li><li>Bundles + hi‑res</li>
+        </ul>
+        <a class="btn" href="#" target="_blank">Join</a>
+      </div>
+      <div class="tier">
+        <h3>BTS + AMA</h3>
+        <p class="price">$30</p>
+        <ul>
+          <li>BTS docs + breakdowns</li><li>Monthly AMA</li>
+        </ul>
+        <a class="btn" href="#" target="_blank">Join</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-foot">
+    <p>© 2025 Studio</p>
   </footer>
-  <script src="script.js"></script>
+
+  <script src="script.js" defer></script>
 </body>
 </html>

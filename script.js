@@ -1,11 +1,14 @@
-const reveals = document.querySelectorAll('.reveal');
+// Scroll reveal
+const io = new IntersectionObserver((ents)=>{
+  ents.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('is-visible'); });
+},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('is-visible');
-    }
-  });
-}, { threshold: 0.1 });
-
-reveals.forEach(section => observer.observe(section));
+// Lightweight parallax on hero title
+const hero = document.querySelector('.hero-media');
+if (hero){
+  window.addEventListener('scroll', ()=>{
+    const y = Math.min(1, window.scrollY / 600);
+    hero.style.transform = `translateY(${y*20}px)`;
+  }, {passive:true});
+}
